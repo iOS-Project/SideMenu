@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5827057EF31A3930209218B9 /* Pods_SideMenuControllerDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2A81B6B6407F2B0A035875 /* Pods_SideMenuControllerDemo.framework */; };
 		D51E48B51E155354002D1B9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51E48B41E155354002D1B9F /* AppDelegate.swift */; };
 		D51E48B71E155354002D1B9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51E48B61E155354002D1B9F /* ViewController.swift */; };
 		D51E48BA1E155354002D1B9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D51E48B81E155354002D1B9F /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E2A81B6B6407F2B0A035875 /* Pods_SideMenuControllerDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SideMenuControllerDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E4D3FEACC26871200C5A60B /* Pods-SideMenuControllerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SideMenuControllerDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SideMenuControllerDemo/Pods-SideMenuControllerDemo.release.xcconfig"; sourceTree = "<group>"; };
+		8C66A085DC2A49750C9CB203 /* Pods-SideMenuControllerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SideMenuControllerDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SideMenuControllerDemo/Pods-SideMenuControllerDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		D51E48B11E155354002D1B9F /* SideMenuControllerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SideMenuControllerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D51E48B41E155354002D1B9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D51E48B61E155354002D1B9F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5827057EF31A3930209218B9 /* Pods_SideMenuControllerDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04CBB88590BCB0842DC0CBDF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E2A81B6B6407F2B0A035875 /* Pods_SideMenuControllerDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B95801D1AD8CC61093C5543C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8C66A085DC2A49750C9CB203 /* Pods-SideMenuControllerDemo.debug.xcconfig */,
+				5E4D3FEACC26871200C5A60B /* Pods-SideMenuControllerDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D51E48A81E155354002D1B9F = {
 			isa = PBXGroup;
 			children = (
 				D51E48B31E155354002D1B9F /* SideMenuControllerDemo */,
 				D51E48B21E155354002D1B9F /* Products */,
+				B95801D1AD8CC61093C5543C /* Pods */,
+				04CBB88590BCB0842DC0CBDF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D51E48C31E155354002D1B9F /* Build configuration list for PBXNativeTarget "SideMenuControllerDemo" */;
 			buildPhases = (
+				A7FBE6A92F05B2AFAF9F8BC4 /* [CP] Check Pods Manifest.lock */,
 				D51E48AD1E155354002D1B9F /* Sources */,
 				D51E48AE1E155354002D1B9F /* Frameworks */,
 				D51E48AF1E155354002D1B9F /* Resources */,
+				C67E7A3CB8B864B5AA65E57D /* [CP] Embed Pods Frameworks */,
+				AF3290CC00666E7549A486CB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A7FBE6A92F05B2AFAF9F8BC4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AF3290CC00666E7549A486CB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SideMenuControllerDemo/Pods-SideMenuControllerDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C67E7A3CB8B864B5AA65E57D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SideMenuControllerDemo/Pods-SideMenuControllerDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D51E48AD1E155354002D1B9F /* Sources */ = {
@@ -258,6 +333,7 @@
 		};
 		D51E48C41E155354002D1B9F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C66A085DC2A49750C9CB203 /* Pods-SideMenuControllerDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SideMenuControllerDemo/Info.plist;
@@ -270,6 +346,7 @@
 		};
 		D51E48C51E155354002D1B9F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E4D3FEACC26871200C5A60B /* Pods-SideMenuControllerDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SideMenuControllerDemo/Info.plist;
